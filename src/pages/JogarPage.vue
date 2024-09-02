@@ -423,6 +423,7 @@ function clickBotao(indice) {
 }
 
 function validarConvite(convite) {
+  console.log(`URL DO BACKEND: ${process.env.URL_BACKEND}`);
   axios
     .get(`${process.env.URL_BACKEND}/convites/validar-convite?id=${convite}`)
     .then((response) => {
