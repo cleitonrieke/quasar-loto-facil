@@ -71,7 +71,7 @@ function recuperarConvites() {
       response.data.forEach((element) => {
         const row = {
           convite: element.chave_convite,
-          url: `${process.env.URL_BACKEND}/#/registrar?convite=${element.chave_convite}`,
+          url: `${process.env.URL_FRONTEND}/#/registrar?convite=${element.chave_convite}`,
           status: element.id_utilizado ? "Utilizado" : "Disponível",
         };
         rows.value.push(row);

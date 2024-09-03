@@ -48,7 +48,10 @@ module.exports = configure(function (/* ctx */) {
 
     // Full list of options: https://v2.quasar.dev/quasar-cli-vite/quasar-config-js#build
     build: {
-      env: { URL_BACKEND: process.env.URL_BACKEND },
+      env: {
+        URL_BACKEND: process.env.URL_BACKEND,
+        URL_FRONTEND: process.env.URL_FRONTEND,
+      },
       target: {
         browser: ["es2019", "edge88", "firefox78", "chrome87", "safari13.1"],
         node: "node20",
