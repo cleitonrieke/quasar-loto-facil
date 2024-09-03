@@ -47,6 +47,13 @@ const columns = [
     sortable: true,
   },
   {
+    name: "url",
+    align: "left",
+    label: "URL",
+    field: "url",
+    sortable: true,
+  },
+  {
     name: "status",
     align: "left",
     label: "Status",
@@ -64,6 +71,7 @@ function recuperarConvites() {
       response.data.forEach((element) => {
         const row = {
           convite: element.chave_convite,
+          url: `${process.env.URL_BACKEND}/#/registrar?convite=${element.chave_convite}`,
           status: element.id_utilizado ? "Utilizado" : "Disponível",
         };
         rows.value.push(row);
